@@ -33,6 +33,11 @@
  \subsubsection{#1}%
  \vspace{-14pt}% Reduce el espacio visible antes del primer párrafo.
 }
+\newcommand{\subseccionTesisConApartado}[2]{%
+ \subseccionTesis{#1}%
+ \nobreak\vspace{-14pt}% Compensa los espacios contiguos de 6 y 8 pt.
+ \apartadoTesis{#2}%
+}
 \newcommand{\subtituloSinNumero}[1]{\par\addvspace{8pt}\noindent\textbf{#1}\par\nobreak\vspace{4pt}}
 \newlist{listaTrasTitulo}{itemize}{1}
 \setlist[listaTrasTitulo]{label=\raisebox{.25ex}{\rule{.8mm}{.8mm}},leftmargin=.75cm,labelsep=.3cm,itemsep=3pt,parsep=0pt,topsep=9pt}
