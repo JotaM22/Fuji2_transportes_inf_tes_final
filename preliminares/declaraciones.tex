@@ -1,7 +1,10 @@
 % Los campos se completan en la versión que revisen y firmen los interesados.
-\newcommand{\bloqueFirmaTesis}[2]{%
+\newcommand{\bloqueFirmaTesis}[3]{%
   \begin{minipage}[t]{.45\linewidth}
     \raggedright\small
+    \parbox[c][1.75cm][c]{\linewidth}{\centering
+      \includegraphics[width=.8\linewidth,height=1.55cm,keepaspectratio]{#3}\par
+    }\par
     \rule{\linewidth}{.4pt}\par
     \textbf{#1}\par
     #2\par
@@ -10,9 +13,9 @@
 \newcommand{\firmasTesis}{%
   \par\noindent
   \bloqueFirmaTesis{\asesorTesis}{Asesor\\%
-    ORCID: \href{https://orcid.org/\orcidAsesor}{\orcidAsesor}}%
+    ORCID: \href{https://orcid.org/\orcidAsesor}{\orcidAsesor}}{figuras/firma-asesor.png}%
   \hfill
-  \bloqueFirmaTesis{\autorTesis}{Autor}%
+  \bloqueFirmaTesis{\autorTesis}{Autor}{figuras/firma-autor.png}%
   \par
 }
 \preliminarTesis[\centering]{Declaración de originalidad}
