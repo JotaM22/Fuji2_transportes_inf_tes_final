@@ -28,13 +28,17 @@
 \titleformat{\subsubsection}[hang]{\normalfont\bfseries\normalsize}{\thesubsubsection.}{.7em}{}
 \titlespacing*{\subsubsection}{0pt}{8pt}{6pt}
 \newcommand{\seccionTesis}[1]{\section{\MakeUppercase{#1}}}
-\newcommand{\subseccionTesis}[1]{\subsection{#1}}
+\newcommand{\espacioTituloParrafo}{\vspace{-14pt}}
+\newcommand{\subseccionTesis}[1]{%
+ \subsection{#1}%
+ \espacioTituloParrafo
+}
 \newcommand{\apartadoTesis}[1]{%
  \subsubsection{#1}%
- \vspace{-14pt}% Reduce el espacio visible antes del primer párrafo.
+ \espacioTituloParrafo
 }
 \newcommand{\subseccionTesisConApartado}[2]{%
- \subseccionTesis{#1}%
+ \subsection{#1}%
  \nobreak\vspace{-14pt}% Compensa los espacios contiguos de 6 y 8 pt.
  \apartadoTesis{#2}%
 }
