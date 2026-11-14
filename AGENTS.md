@@ -32,6 +32,13 @@ No escribir números manuales, tabulaciones o `\vspace` individuales para imitar
 - Dejar en blanco los campos sin información confirmada. Usar comentarios de LaTeX para indicar dónde incorporar el contenido pendiente.
 - Los resultados se basan solo en datos suministrados; la discusión interpreta resultados efectivamente obtenidos.
 
+## Cohesión de la redacción
+
+- Antes de redactar o corregir, identifica la idea central de cada párrafo y el papel de las demás ideas como evidencia, explicación, condición, contraste o aplicación.
+- Integra las ideas dependientes mediante subordinación, referentes explícitos y conexiones que expresen su relación. Si un bloque cumple dos funciones distintas, distribúyelo en párrafos.
+- Conserva el punto seguido cuando la oración siguiente avance el mismo argumento y su relación con la anterior sea inequívoca. No lo uses para yuxtaponer afirmaciones ni lo sustituyas mecánicamente por otra puntuación o por conectores.
+- Antes de entregar, comprueba en cada párrafo el referente de las expresiones, el fundamento de las afirmaciones y la continuidad del argumento. Conserva citas, cifras, tiempos verbales y decisiones metodológicas en una revisión de estilo.
+
 ## Control de calidad
 - Compilar siempre con **XeLaTeX**, nunca pdfLaTeX, por `fontspec`.
 - Revisar visualmente carátula, preliminares, índice, divisorias, jerarquía, cuerpo, leyendas, notas, referencias, horizontales y anexos.
