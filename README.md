@@ -1,6 +1,6 @@
 # Informe de tesis de maestría · Simbal, 2026
 
-Informe de la Maestría en Transportes y Conservación Vial de la Universidad Privada Antenor Orrego. Esta primera versión incluye la carátula, las páginas preliminares y los índices automáticos. Los textos preliminares se incorporarán al contar con su contenido.
+Informe de la Maestría en Transportes y Conservación Vial de la Universidad Privada Antenor Orrego. Esta primera versión incluye la carátula, las páginas preliminares y los índices automáticos. La declaración de originalidad y la acreditación están redactadas como borradores para revisión y firma. La presentación, la dedicatoria y el agradecimiento se adaptaron del modelo de Gerencia. El resumen y el abstract se completarán cuando esté redactado el cuerpo del informe.
 
 ## Compilación
 
@@ -22,3 +22,5 @@ El documento es A4, con margen izquierdo de 3 cm y los otros márgenes de 2,5 cm
 - **Informe_Tesis_Simbal_2026_Preliminares.pdf** permite revisar la primera compilación.
 
 El título, la línea y la sublínea siguen el proyecto corregido. Los datos del autor y del asesor se contrastaron con el registro institucional de la tesis. Completar el jurado y la resolución con la designación oficial y verificar por separado el ORCID del autor.
+
+Las páginas de firma conservan espacios para completar en la versión institucional. Registrar el porcentaje y la fecha del reporte de similitud cuando se disponga del informe correspondiente.

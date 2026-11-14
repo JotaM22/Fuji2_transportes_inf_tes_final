@@ -1,0 +1,56 @@
+% Los campos se completan en la versión que revisen y firmen los interesados.
+\newcommand{\bloqueFirmaTesis}[2]{%
+  \begin{minipage}[t]{.45\linewidth}
+    \raggedright\small
+    \rule{\linewidth}{.4pt}\par
+    \textbf{#1}\par
+    #2\par
+  \end{minipage}%
+}
+\newcommand{\firmasTesis}{%
+  \par\noindent
+  \bloqueFirmaTesis{\asesorTesis}{Asesor\\%
+    ORCID: \href{https://orcid.org/\orcidAsesor}{\orcidAsesor}}%
+  \hfill
+  \bloqueFirmaTesis{\autorTesis}{Autor}%
+  \par
+}
+\newcommand{\estadoDeclaracionTesis}{%
+  \noindent\textit{Borrador para revisión y firma}\par
+}
+
+\preliminarTesis[\centering]{Declaración de originalidad}
+\estadoDeclaracionTesis
+
+Yo, \asesorTesis, en calidad de asesor de la tesis titulada
+«\textbf{\tituloTesis}», desarrollada por \autorTesis,
+consigno los datos del reporte de similitud y el resultado de su revisión.
+
+\noindent Índice de similitud: \rule{1.3cm}{.4pt}\,\%\par
+\noindent Fecha del reporte: \rule{4cm}{.4pt}\par
+\noindent Resultado de la revisión de las coincidencias, las citas y las referencias:\par
+\noindent\rule{\linewidth}{.4pt}\par
+\noindent\rule{\linewidth}{.4pt}\par
+\noindent Ciudad y fecha: \ciudadTesis, \rule{6cm}{.4pt}\par
+
+\vfill
+\firmasTesis
+\vspace*{.19\textheight}
+
+\preliminarTesis{Acreditación}
+\estadoDeclaracionTesis
+
+La tesis titulada «\textbf{\tituloTesis}» corresponde a
+\autorTesis, quien la presenta para optar el grado de Maestro en
+\programaTesis{} en la Escuela de Posgrado de la Universidad Privada
+Antenor Orrego.
+
+La firma del asesor en esta hoja acredita la revisión integral del
+informe, la atención de las observaciones formuladas durante la asesoría y
+la conformidad para presentar la tesis al Jurado Evaluador.
+
+\noindent\ciudadTesis, \rule{6cm}{.4pt}\par
+
+\vfill
+\firmasTesis
+\vspace*{.19\textheight}
