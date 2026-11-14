@@ -35,7 +35,7 @@ No escribir números manuales, tabulaciones o `\vspace` individuales para imitar
 ## Cohesión de la redacción
 
 - Antes de redactar o corregir, identifica la idea central de cada párrafo y el papel de las demás ideas como evidencia, explicación, condición, contraste o aplicación.
-- Integra las ideas dependientes mediante subordinación, referentes explícitos y conexiones que expresen su relación. Si un bloque cumple dos funciones distintas, distribúyelo en párrafos.
+- Integra las ideas dependientes mediante subordinación, referentes explícitos y conexiones que expresen su relación. En revisiones de documentos existentes, conserva los límites de los párrafos y resuelve la continuidad dentro de cada bloque. Elige conectores según su función, como «porque» para fundamentar, «de modo que» para expresar una consecuencia, «si» para introducir una condición y «en particular» para precisar.
 - Conserva el punto seguido cuando la oración siguiente avance el mismo argumento y su relación con la anterior sea inequívoca. No lo uses para yuxtaponer afirmaciones ni lo sustituyas mecánicamente por otra puntuación o por conectores.
 - Antes de entregar, comprueba en cada párrafo el referente de las expresiones, el fundamento de las afirmaciones y la continuidad del argumento. Conserva citas, cifras, tiempos verbales y decisiones metodológicas en una revisión de estilo.
 
