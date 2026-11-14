@@ -34,3 +34,111 @@ La diferencia entre ausencia de una estructura, abertura físicamente ocupada y 
 
 El procedimiento de selección de los registros operó, por tanto, en dos niveles: identificación exhaustiva de las veinte unidades pertenecientes al caso y control de integridad de los datos empleados en cada análisis. La cantidad de fotografías, subunidades superficiales y repeticiones de perfil no se utilizó como multiplicador de \(n\), pues hacerlo habría introducido seudorreplicación en las estimaciones de asociación. El tamaño reducido del conjunto y la vecindad geográfica entre estructuras constituyeron restricciones relevantes para la precisión de los coeficientes y justificaron examinar explícitamente la dependencia espacial durante la contrastación.
 
+\seccionTesis{Técnicas e instrumentos de recolección de datos}
+
+Las técnicas metodológicas se organizaron en observación estructurada de la infraestructura, medición geométrica directa, inspección visual sistemática del pavimento y adquisición instrumental del perfil longitudinal. La primera permitió identificar trayectorias de evacuación y condiciones de acceso a los pases; la segunda proporcionó las longitudes y áreas necesarias para calcular los indicadores del drenaje; las dos restantes sirvieron para caracterizar la condición funcional mediante PCI e IRI, según procedimientos de naturaleza diferente. El registro por unidad espacial permitió vincular técnicas heterogéneas sin considerar equivalentes sus objetos de medición, mientras que la inspección de deterioros se fundamentó en ASTM D6433-18 y el procesamiento del perfil longitudinal en ASTM E1926-08(2021) (ASTM International, 2018, 2021).
+
+\subseccionTesis{Instrumento de registro de drenaje longitudinal}
+
+La ficha de evacuación longitudinal se estructuró para examinar los márgenes izquierdo y derecho de cada unidad estructura–sector mediante una identificación común y dos recorridos de observación. Sus campos comprendieron código de unidad, tramo, progresiva inicial y final, margen, fecha, evaluador, longitud evaluada, longitud continua y descripción del obstáculo o discontinuidad observado; las fotografías y progresivas de las interrupciones complementaron los datos métricos, con la finalidad de conservar la localización exacta de las restricciones. Se consideró continuo el recorrido que mantenía una trayectoria superficial reconocible y libre hasta una descarga, mientras que una barrera transversal, acumulación de material que ocupaba el paso o terminación cerrada se registró como interrupción.
+
+El indicador CL se definió como el porcentaje de longitud continua respecto de toda la longitud longitudinal evaluada en la unidad:
+
+\[
+CL=100\,\frac{L_c}{L_e},\qquad 0\leq CL\leq 100.
+\]
+
+En esta expresión, \(L_c\) representa la suma de longitudes continuas en ambos márgenes, medida en metros, y \(L_e\) la suma de longitudes examinadas en esos márgenes, expresada en la misma unidad; para evitar doble conteo, las interrupciones coincidentes dentro de un margen se consolidaron antes de determinar el numerador. Un valor superior representa mayor proporción de conducción superficial físicamente conectada con la descarga, sin describir el caudal que podría circular por la sección. Cuando \(L_e=0\), se estableció la condición de indicador no calculable y se revisó la delimitación, puesto que no resulta válido atribuir automáticamente continuidad cero a un recorrido no evaluado.
+
+El formulario diferenció el dato métrico del diagnóstico descriptivo: una interrupción por vegetación, depósito de sedimentos o ausencia de continuidad pudo generar valores semejantes del indicador, aunque sus condiciones de conservación fueran diferentes. En la figura \ref{fig:ficha-longitudinal} se identifica el espacio reservado para documentar el instrumento completo y sus campos de ubicación, cálculo y evidencia.
+
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox[c][3.0cm][c]{0.88\linewidth}{\centering [Figura: ficha de registro de evacuación longitudinal por margen]\\[4pt]Imagen del instrumento pendiente de incorporar}}
+\caption{Ficha de inspección de drenaje longitudinal}
+\label{fig:ficha-longitudinal}
+\end{figure}
+
+La representación del instrumento permite distinguir las columnas de longitud evaluada y continua de los campos destinados a describir el tipo de interrupción; esa separación fue necesaria para que la interpretación técnica no modificara la regla de cálculo previamente establecida. En la revisión de consistencia se comprobaron los límites de cada margen, la igualdad de unidades y el cumplimiento de \(0\leq L_c\leq L_e\), conservando las mediciones originales cuando se revisaba una anotación.
+
+\subseccionTesis{Instrumento de registro de drenaje transversal}
+
+La ficha de estructuras transversales correspondió al registro geométrico de los dos extremos de cada pase de agua y conservó la identificación de entrada y salida para distinguir dónde se localizaba la sección más restringida. El formato comprendió código, tramo, progresiva, tipo de sección, fecha, dimensiones interiores, área interior, área ocupada por sedimentos u obstáculos, área libre calculada, fotografía frontal escalada y observaciones de erosión, integridad o descarga. Se registró el material visible que reducía efectivamente la abertura, evitando agregar a la superficie ocupada condiciones de deterioro del entorno que no intervenían directamente en el área disponible.
+
+Las áreas libres de cada extremo se obtuvieron por diferencia entre el área interior y la superficie ocupada, conservando en metros cuadrados los datos que sustentaron la operación. Cuando la abertura presentó geometría irregular, el protocolo contempló delimitar su contorno sobre fotografía frontal con escala, calcular el área mediante una referencia métrica común y asociar el archivo de imagen con el extremo correspondiente. La expresión operacional utilizada fue:
+
+\[
+CT=100\,\min\left(\frac{A_{le}}{A_e},\,\frac{A_{ls}}{A_s}\right),
+\qquad 0\leq CT\leq100,
+\]
+
+donde \(A_e\) y \(A_s\) designan las áreas interiores de entrada y salida, respectivamente, y \(A_{le}\) y \(A_{ls}\) sus áreas libres. La selección del menor porcentaje respondió a la necesidad de representar el extremo con la mayor restricción proporcional; este criterio fue una decisión operacional del estudio y no una expresión de capacidad hidráulica, cuya determinación requiere condiciones de flujo, pendiente y descarga distintas de las registradas por la ficha (MTC, 2014).
+
+En los casos con una abertura completamente ocupada y debidamente verificable, el área libre se interpretó como cero; por el contrario, si un extremo resultaba inaccesible, el registro debía conservar la condición de dato faltante y no reemplazarse por el valor del otro extremo. La figura \ref{fig:ficha-transversal} corresponde a la ubicación destinada a la ficha y al esquema de identificación de ambos extremos.
+
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox[c][3.0cm][c]{0.88\linewidth}{\centering [Figura: ficha de medición de entrada y salida de alcantarilla]\\[4pt]Imagen del instrumento pendiente de incorporar}}
+\caption{Ficha de inspección geométrica del drenaje transversal}
+\label{fig:ficha-transversal}
+\end{figure}
+
+La presentación conjunta de las columnas de entrada y salida hace visible que el indicador CT se obtuvo mediante una comparación entre proporciones y que las dimensiones originales permanecieron disponibles para revisar diferencias entre estructuras; por esta razón, los campos de observación de erosión y condiciones de descarga se mantuvieron como descripciones complementarias, separadas de la fórmula porcentual.
+
+\subseccionTesis{Instrumento de inspección superficial PCI}
+
+La evaluación de la condición superficial se estructuró mediante el formato de inspección de deterioros previsto en ASTM D6433-18, cuya unidad de registro correspondió a una superficie delimitada dentro del sector asociado al pase. Se estableció la inspección de toda la superficie elegible del sector mediante subunidades con áreas efectivas identificadas, en las que se consignaron tipo de falla, severidad, extensión o cantidad y los parámetros requeridos para obtener los valores deducidos y el índice PCI (ASTM International, 2018). La diferencia entre deterioros registrados y calificación final resultó metodológicamente relevante, porque el índice se obtiene mediante un procedimiento de deducción corregida y no a partir de un promedio directo de porcentajes de superficie dañada.
+
+Para cada subunidad se conservó su progresiva inicial, progresiva final, área y PCI calculado, mientras que la consolidación del sector se definió como un promedio ponderado por área, expresado mediante:
+
+\[
+PCI_s=\frac{\sum_{j=1}^{m} A_j\,PCI_j}{\sum_{j=1}^{m}A_j},
+\qquad 0\leq PCI_s\leq100,
+\]
+
+donde \(A_j\) es el área efectiva de la subunidad \(j\), medida en metros cuadrados, \(PCI_j\) es su calificación y \(m\) el número de subunidades válidas. Esta ponderación correspondió a la regla de agregación establecida para el estudio y se aplicó únicamente cuando se dispuso de las superficies y calificaciones necesarias; una suma de áreas nula habría hecho el promedio no calculable. Los valores elevados del índice expresan una mejor condición superficial, aunque no equivalen a mediciones directas de regularidad, capacidad estructural o adherencia.
+
+En la figura \ref{fig:formato-pci} se reserva el espacio de presentación del formato de reconocimiento de deterioros, que reúne los campos de localización, tipo de falla, severidad, cantidad y procesamiento del índice.
+
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox[c][3.0cm][c]{0.88\linewidth}{\centering [Figura: instrumento de inspección de deterioros PCI]\\[4pt]Imagen del instrumento pendiente de incorporar}}
+\caption{Formato de evaluación superficial del pavimento mediante PCI}
+\label{fig:formato-pci}
+\end{figure}
+
+La identificación individual de cada subunidad permitió recuperar los deterioros que explicaban la calificación agregada y comprobar que los límites de inspección no rebasaban la unidad estructura–sector. Los registros de áreas y valores deducidos se conservaron en el soporte de cálculo como evidencia numérica de la consolidación, mientras que el formulario constituyó el instrumento de observación.
+
+\subseccionTesis{Instrumento de medición longitudinal IRI}
+
+El registro de rugosidad se organizó mediante un formulario de adquisición de perfiles por huella, asociado con el equipo estático de contacto y con los límites de cada sector. El formato contempló identificación de unidad, fecha, progresivas, longitud recorrida, huella izquierda o derecha, separación de muestras, secuencia de elevaciones, comprobación de cero y referencia de respuesta a una elevación conocida. Se estableció una separación longitudinal de 0,25 m y dos recorridos de repetición para cada huella, cuyos archivos individuales se conservaron antes de obtener la medida representativa del sector.
+
+El cálculo de IRI se fundamentó en el procesamiento matemático del perfil longitudinal, según ASTM E1926-08(2021), y en los criterios de calidad de adquisición descritos por Karamihas y Sayers (2025); el IRI se expresa en metros por kilómetro y su incremento indica mayor rugosidad longitudinal. Para cada huella se registraron los dos resultados de repetición y la diferencia absoluta entre ellos, mientras que el valor de sector se definió como promedio de los resultados representativos de ambas huellas. El promedio no sustituye el algoritmo de cálculo de IRI a partir del perfil, sino que opera sobre los valores ya calculados mediante el procedimiento de rugosidad.
+
+La figura \ref{fig:perfilado} presenta la ubicación destinada al instrumento de perfilado y a su formato de adquisición, con los campos de identificación y repetición que permitieron comprobar la correspondencia entre las dos huellas.
+
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox[c][3.0cm][c]{0.88\linewidth}{\centering [Figura: equipo de perfilado estático y formato de recorridos IRI]\\[4pt]Imagen del equipo e instrumento pendiente de incorporar}}
+\caption{Registro de perfil longitudinal para el cálculo del IRI}
+\label{fig:perfilado}
+\end{figure}
+
+Los archivos de elevaciones constituían el registro primario necesario para reproducir el IRI. Por ello, una tabla que contuviera únicamente los resultados numéricos por huella no sería suficiente para verificar de manera independiente el algoritmo, aunque sí permitiría comprobar promedios y diferencias entre recorridos; esta distinción se consideró en la valoración de trazabilidad del conjunto de datos disponible.
+
+\subseccionTesis{Validez y consistencia de las mediciones}
+
+El protocolo estableció una revisión de pertinencia y claridad de las fichas por tres especialistas, además de una comparación independiente entre dos evaluadores en las unidades 1, 5, 9, 13 y 17 del inventario. El procedimiento de concordancia se formuló mediante el coeficiente de correlación intraclase de acuerdo absoluto, con intervalo de confianza de 95 \%, conforme a los modelos examinados por McGraw y Wong (1996), cuya selección requiere especificar el tipo de efectos y si la inferencia corresponde a evaluaciones individuales o promediadas. La disposición de esas actividades en el plan permite describir el método previsto, aunque los archivos consultados no contienen dictámenes firmados ni pares completos de mediciones independientes que acrediten la ejecución del cálculo o su resultado.
+
+La consistencia geométrica se evaluó a partir de las relaciones entre áreas interiores, ocupadas y libres, junto con la coincidencia de los límites espaciales y la ausencia de duplicaciones; para el PCI se verificó el rango admisible y la ponderación por superficie, mientras que para el IRI se contempló revisar la estabilidad del cero, la respuesta del equipo y las diferencias de repetición por huella. No se aplicaron coeficientes de consistencia interna a estos formatos, porque sus campos recogen magnitudes físicas y registros complementarios, no una escala homogénea de ítems psicológicos.
+
+\seccionTesis{Procedimientos}
+
+La secuencia de trabajo se organizó en fases de preparación, revisión de instrumentos, delimitación de unidades, registro de indicadores y conciliación de datos. En la fase inicial se ordenaron los pases por tramo y progresiva, se definieron códigos individuales del SIM-01 al SIM-20 y se establecieron las reglas de recorte del sector; el inventario integró la referencia de cada estructura con coordenadas y límites longitudinales, cuyo control permitió identificar la superficie que debía relacionarse con los dos indicadores de drenaje. El sistema de referencia previsto para la localización fue WGS84, mientras que el cálculo de vecindad requirió coordenadas métricas comparables, condición que se consideró antes de interpretar distancias entre unidades.
+
+La revisión de pertinencia y el piloto se programaron dentro de las semanas 9 a 13 del plan, comprendidas entre el 29 de marzo y el 2 de mayo de 2026, con atención a la comprensión de los criterios de continuidad, identificación de extremos, medición superficial y repetibilidad del perfilado. El protocolo definió una ventana de campaña del 3 de mayo al 20 de junio de 2026, dentro de la cual las distintas observaciones de cada unidad debían realizarse con una separación máxima de siete días. Para conservar la comparabilidad temporal se previeron campos de fecha, operador, precipitación y mantenimiento reciente, cuyo registro permitiría reconocer condiciones concurrentes entre la inspección del drenaje y la evaluación funcional del pavimento.
+
+La fase de levantamiento contempló primero la identificación del pase y la delimitación del sector, seguida de los recorridos por ambos márgenes y las mediciones de entrada y salida. Sobre esa misma delimitación se definió la inspección de fallas PCI y el registro longitudinal de las huellas, de modo que las mediciones mantuvieran una referencia espacial compartida. Las diferencias geométricas o de identificación debían resolverse mediante comprobación de progresivas, fotografías y nuevas lecturas cuando correspondiera, conservando el dato original y una nota de corrección en el registro.
+
+Finalmente, el procesamiento integró los registros mediante el código de unidad, revisó correspondencia entre extremos y sectores, identificó duplicaciones y comprobó los límites de cálculo de CL, CT, PCI e IRI. La planificación original situó el análisis y la redacción entre agosto y octubre de 2026; para el ejercicio formativo se estructuró una base con veinte pares estructura–sector y hojas subordinadas por margen, extremo, subunidad PCI y huella IRI, sin que esa organización constituya por sí sola certificación de una campaña de campo.
+
