@@ -9,6 +9,10 @@ on:
       - '.github/workflows/compilar-informe.yml'
   workflow_dispatch:
 
+concurrency:
+  group: compilar-informe-main
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -31,5 +35,6 @@ jobs:
           git add Informe_Tesis_Simbal_2026_Preliminares.pdf
           if ! git diff --cached --quiet; then
             git commit -m "Actualizar PDF tras revisión editorial"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
