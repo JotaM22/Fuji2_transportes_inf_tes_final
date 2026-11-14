@@ -29,7 +29,10 @@
 \titlespacing*{\subsubsection}{0pt}{8pt}{6pt}
 \newcommand{\seccionTesis}[1]{\section{\MakeUppercase{#1}}}
 \newcommand{\subseccionTesis}[1]{\subsection{#1}}
-\newcommand{\apartadoTesis}[1]{\subsubsection{#1}}
+\newcommand{\apartadoTesis}[1]{%
+ \subsubsection{#1}%
+ \vspace{-14pt}% Reduce el espacio visible antes del primer párrafo.
+}
 \newcommand{\subtituloSinNumero}[1]{\par\addvspace{8pt}\noindent\textbf{#1}\par\nobreak\vspace{4pt}}
 \newlist{listaTrasTitulo}{itemize}{1}
 \setlist[listaTrasTitulo]{label=\raisebox{.25ex}{\rule{.8mm}{.8mm}},leftmargin=.75cm,labelsep=.3cm,itemsep=3pt,parsep=0pt,topsep=9pt}
