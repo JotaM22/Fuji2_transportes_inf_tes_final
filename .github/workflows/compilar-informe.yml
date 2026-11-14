@@ -1,0 +1,35 @@
+name: Compilar informe de tesis
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.tex'
+      - '**.sty'
+      - '.github/workflows/compilar-informe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compilar PDF con XeLaTeX
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          latexmk_use_xelatex: true
+          args: -pdf -xelatex -interaction=nonstopmode -halt-on-error -file-line-error
+      - name: Incorporar PDF actualizado
+        run: |
+          cp main.pdf Informe_Tesis_Simbal_2026_Preliminares.pdf
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Informe_Tesis_Simbal_2026_Preliminares.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m "Actualizar PDF tras revisión editorial"
+            git push
+          fi
