@@ -1,0 +1,72 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tablas}[2026/11/09 Tablas y figuras del informe]
+\RequirePackage{array}
+\RequirePackage{tabularx}
+\RequirePackage{booktabs}
+\RequirePackage{longtable}
+\RequirePackage{multirow}
+\RequirePackage{pdflscape}
+\RequirePackage{caption}
+\RequirePackage{enumitem}
+\RequirePackage{eso-pic}
+\RequirePackage{tikz}
+\captionsetup[table]{position=top,labelfont=bf,textfont=it,labelsep=newline,justification=raggedright,singlelinecheck=false,skip=10pt,font=normalsize}
+\captionsetup[figure]{position=top,labelfont=bf,textfont=it,labelsep=newline,justification=raggedright,singlelinecheck=false,skip=10pt,font=normalsize}
+\newcommand{\notaTabla}[1]{\par\vspace{9pt}\noindent\begin{minipage}{\linewidth}\small\textit{Nota.} #1\end{minipage}\par}
+\newcommand{\fuenteTabla}[1]{\par\vspace{9pt}\noindent\begin{minipage}{\linewidth}\small Fuente: #1\end{minipage}\par}
+\newenvironment{paginaHorizontal}{\clearpage\begin{landscape}\thispagestyle{plain}}{\end{landscape}\clearpage}
+\counterwithout{table}{chapter}
+\counterwithout{figure}{chapter}
+
+
+% --------------------------------------------------------------
+% MATRIZ DE OPERACIONALIZACION (criterios de plantilla de proyecto)
+% --------------------------------------------------------------
+% El contenido de la matriz es opcional y se invoca desde el documento.
+% Mantiene A4 horizontal, bordes completos, dimensiones agrupadas,
+% indicadores independientes y pagina centrada al pie.
+%
+% Compatibilidad con comandos de la plantilla de proyecto:
+\newcommand{\iniciotablaHorizontal}{\par\noindent\ignorespaces}
+\newcommand{\celdaIndicadores}[1]{%
+  \begin{minipage}[t]{\linewidth}%
+  \vspace{0pt}%
+  \begin{itemize}[leftmargin=1.25em,label=\textbullet,
+                  topsep=0pt,itemsep=2pt,parsep=0pt,partopsep=0pt]%
+  #1%
+  \end{itemize}%
+  \end{minipage}%
+}
+\newcommand{\paginaHorizontalCentro}{%
+  \thispagestyle{empty}%
+  \AddToShipoutPictureFG*{%
+    \begin{tikzpicture}[remember picture,overlay]%
+      \node[rotate=90] at ([xshift=-1cm]current page.east) {\thepage};%
+    \end{tikzpicture}%
+  }%
+}
+
+% Entorno para una matriz que cabe en UNA pagina horizontal.
+% Para matrices de varias paginas: dividir por bloques con el mismo
+% encabezado y usar un entorno por pagina. No dividir multirow.
+\newenvironment{matrizOperacionalizacion}{%
+  \clearpage
+  \begin{landscape}%
+  \paginaHorizontalCentro
+  \begingroup
+  \setstretch{1.0}%
+  \setlength{\parskip}{0pt}%
+  \setlength{\parindent}{0pt}%
+  \footnotesize
+  \renewcommand{\arraystretch}{1.32}%
+}{%
+  \par
+  \endgroup
+  \end{landscape}%
+  \clearpage
+}
+% Titulo de la tabla con numeracion automatica y registro en indice.
+\newcommand{\tituloMatrizOperacionalizacion}[2][]{%
+  \captionof{table}{#2}%
+  \if\relax\detokenize{#1}\relax\else\label{#1}\fi
+}

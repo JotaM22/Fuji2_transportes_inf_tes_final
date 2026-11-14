@@ -1,0 +1,26 @@
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage{estilos}
+\usepackage{estructura}
+\usepackage{tablas}
+
+\input{datos-tesis}
+\hypersetup{pdftitle={\tituloTesis},pdfauthor={\autorTesis}}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\input{preliminares/caratula}
+
+\pagenumbering{roman}
+\hypersetup{pageanchor=true}
+\input{preliminares/paginas}
+
+\clearpage
+\tableofcontents
+\clearpage
+\listoftables
+\clearpage
+\listoffigures
+
+% Incorporar aquí el cuerpo del informe cuando se entregue el contenido.
+% Iniciar el cuerpo con \clearpage\pagenumbering{arabic}.
+\end{document}
