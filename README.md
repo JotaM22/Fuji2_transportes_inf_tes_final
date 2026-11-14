@@ -23,4 +23,4 @@ El documento es A4, con margen izquierdo de 3 cm y los otros márgenes de 2,5 cm
 
 El título, la línea y la sublínea siguen el proyecto corregido. Los datos del autor y del asesor se contrastaron con el registro institucional de la tesis. Completar el jurado y la resolución con la designación oficial y verificar por separado el ORCID del autor.
 
-Las páginas de firma conservan espacios para completar en la versión institucional. Registrar el porcentaje y la fecha del reporte de similitud cuando se disponga del informe correspondiente.
+Las páginas de firma conservan espacios para completar en la versión institucional. La declaración usa X% como marcador del índice de similitud. Sustituirlo y completar la fecha con el informe de Turnitin. Las afirmaciones de la declaración y la acreditación se incluyen para revisión de quienes deban firmarlas.
