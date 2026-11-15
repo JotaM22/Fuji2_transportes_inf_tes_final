@@ -2,6 +2,12 @@ name: Compilar informe de tesis
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.tex'
+      - '**/*.sty'
+      - '.github/workflows/compilar-informe.yml'
 
 concurrency:
   group: compilar-informe-main
