@@ -94,14 +94,15 @@ SIM-20 & 1 & 0,24 & \parbox[t]{5.5cm}{Longitud nominal 85.74 m; perfilada 85.50 
 }
 
 \newcommand{\tablaResultadoCinco}{%
-\begin{paginaHorizontal}
+\par\medskip\noindent
 \begingroup
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \scriptsize
 \captionof{table}{Estadísticos descriptivos de CL, CT, PCI e IRI en las veinte unidades}\label{tab:res-descriptivos}
 \vspace{4pt}
-\begin{tabularx}{\linewidth}{@{}llrrrrrrrrr@{}}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}llrrrrrrrrr@{}}
 \toprule
 \textbf{Indicador} & \textbf{Unidad} & \textbf{n} & \textbf{Media} & \textbf{DE} & \textbf{Mediana} & \textbf{Q1} & \textbf{Q3} & \textbf{RIC} & \textbf{Mín.} & \textbf{Máx.} \\
 \midrule
@@ -110,10 +111,11 @@ CT & \% & 20 & 76,45 & 8,16 & 77,78 & 70,18 & 83,57 & 13,39 & 61,71 & 91,26 \\
 PCI & 0–100 & 20 & 68,67 & 9,63 & 66,68 & 62,84 & 76,52 & 13,68 & 50,26 & 83,39 \\
 IRI & m/km & 20 & 3,23 & 0,84 & 3,10 & 2,63 & 3,94 & 1,31 & 1,92 & 4,72 \\
 \bottomrule
-\end{tabularx}
+\end{tabular}
+}% ajuste al ancho de A4 vertical
 \notaTabla{Datos calculados a partir de la base unificada de las veinte unidades estructura--sector de Simbal, 2026.}
 \endgroup
-\end{paginaHorizontal}
+
 }
 
 \newcommand{\tablaResultadoSeis}{%
@@ -211,14 +213,15 @@ H4 & CT–IRI & -0,1400 & 9999 & 5216 & 0,5217 & Bilateral \\
 }
 
 \newcommand{\tablaResultadoDiez}{%
-\begin{paginaHorizontal}
+\par\medskip\noindent
 \begingroup
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \footnotesize
 \captionof{table}{Ajuste secuencial de Holm y decisiones estadísticas de las hipótesis H1 a H4}\label{tab:res-holm}
 \vspace{4pt}
-\begin{tabularx}{\linewidth}{@{}rlrrrrrl@{}}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}rlrrrrrl@{}}
 \toprule
 \textbf{Orden} & \textbf{Hipótesis} & \textbf{p espacial} & \textbf{Factor} & \textbf{p por factor} & \textbf{p Holm} & \textbf{Umbral} & \textbf{Decisión} \\
 \midrule
@@ -227,10 +230,11 @@ H4 & CT–IRI & -0,1400 & 9999 & 5216 & 0,5217 & Bilateral \\
 3 & H3 & 0,2675 & 2 & 0,5350 & 0,5350 & 0,0250 & No significativa \\
 4 & H4 & 0,5217 & 1 & 0,5217 & 0,5350 & 0,0500 & No significativa \\
 \bottomrule
-\end{tabularx}
+\end{tabular}
+}% ajuste al ancho de A4 vertical
 \notaTabla{Significancia familiar: $\alpha=0{,}05$; ajuste secuencial de Holm.}
 \endgroup
-\end{paginaHorizontal}
+
 }
 
 \newcommand{\tablaResultadoOnce}{%
@@ -258,14 +262,15 @@ H4 & CT–IRI & -0,1053 & -0,2211 & 0,0439 & No & 20 \\
 }
 
 \newcommand{\tablaResultadoDoce}{%
-\begin{paginaHorizontal}
+\par\medskip\noindent
 \begingroup
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \footnotesize
 \captionof{table}{Síntesis de resultados de los objetivos específicos, hipótesis y decisión inferencial}\label{tab:res-sintesis}
 \vspace{4pt}
-\begin{tabularx}{\linewidth}{@{}llllrrrl@{}}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}llllrrrl@{}}
 \toprule
 \textbf{Objetivo} & \textbf{Hipótesis} & \textbf{Relación} & \textbf{Sentido} & \textbf{Rho residual} & \textbf{p espacial} & \textbf{p Holm} & \textbf{Resultado} \\
 \midrule
@@ -274,8 +279,9 @@ OE2 & H2 & CL–IRI & Inversa & -0,5893 & 0,0356 & 0,1068 & No significativa (Ho
 OE3 & H3 & CT–PCI & Directa & 0,2893 & 0,2675 & 0,5350 & No significativa (Holm) \\
 OE4 & H4 & CT–IRI & Inversa & -0,1400 & 0,5217 & 0,5350 & No significativa (Holm) \\
 \bottomrule
-\end{tabularx}
+\end{tabular}
+}% ajuste al ancho de A4 vertical
 \notaTabla{Las decisiones corresponden a hipótesis específicas; no se estimó un contraste global independiente.}
 \endgroup
-\end{paginaHorizontal}
+
 }
