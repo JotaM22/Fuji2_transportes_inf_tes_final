@@ -180,7 +180,35 @@ El análisis descriptivo se diseñó mediante tablas de distribución y medidas 
 
 Para cada combinación se especificó el coeficiente rho de Spearman, calculado como correlación de Pearson entre los rangos de los indicadores, asignando rangos promedio a los empates. Su signo se interpretó de acuerdo con la direccionalidad de la hipótesis y su magnitud se mantuvo como medida de asociación, sin utilizar umbrales cualitativos rígidos para sustituir el valor numérico. La correlación observada respondió al ordenamiento de las veinte unidades, aunque la inferencia convencional basada en independencia podía resultar inadecuada cuando estructuras cercanas compartían características físicas o constructivas; por ello, el protocolo incorporó una segunda etapa de contraste espacial sustentada en Wagner y Dray (2015).
 
-La matriz de proximidad se definió a partir de distancias entre coordenadas métricas, conectando cada sector con sus dos vecinos más próximos y simetrizando posteriormente las relaciones. Sobre las variables transformadas a rangos se estableció retirar la tendencia lineal asociada con las coordenadas, conservar los residuos y calcular la correlación ajustada que se compararía con una distribución nula espacial. La especificación incluyó 9\,999 aleatorizaciones espectrales de Moran y una prueba bilateral basada en la magnitud absoluta del estadístico observado frente a las realizaciones aleatorizadas. Para una implementación reproducible se requería documentar el algoritmo exacto de aleatorización, la semilla, la matriz de pesos y el procedimiento empleado para convertir la distribución simulada en un valor de significancia; el libro de datos disponible no incorpora esos resultados ni permite confirmar que se haya ejecutado el procedimiento.
+La matriz de proximidad se definió a partir de distancias entre coordenadas métricas, conectando cada sector con sus dos vecinos más próximos y simetrizando posteriormente las relaciones. Sobre las variables transformadas a rangos se estableció retirar la tendencia lineal asociada con las coordenadas, conservar los residuos y calcular la correlación ajustada que se compararía con una distribución nula espacial. La cantidad de 9\,999 aleatorizaciones se estableció en el plan de investigación como una elección de resolución numérica y viabilidad computacional, no como resultado de una fórmula de tamaño muestral ni como exigencia de la aleatorización espectral de Moran. El método de Wagner y Dray (2015) proporciona el fundamento para construir realizaciones bajo una hipótesis nula espacial que retengan propiedades de autocorrelación de los datos, mientras que la cantidad de realizaciones determina la granularidad con la que se estima la significancia mediante Monte Carlo. Para cada relación se planteó una prueba bilateral que compara el valor absoluto de la correlación espacialmente ajustada con los valores absolutos de las correlaciones obtenidas en las realizaciones nulas.
+
+La estimación de significancia se definió mediante la corrección que incorpora el estadístico observado al conjunto de resultados aleatorizados, evitando estimar una probabilidad exactamente igual a cero por ausencia de excedencias (Phipson y Smyth, 2010):
+
+\[
+\widehat{p}_{MC}=\frac{b+1}{B+1}, \qquad
+b=\sum_{k=1}^{B}\mathbb{I}\!\left(
+\left|T_k^{*}\right|\geq\left|T_{\mathrm{obs}}\right|
+\right).
+\]
+
+En estas expresiones, \(B\) representa el número de aleatorizaciones, \(b\) la cantidad de realizaciones cuyo estadístico es al menos tan extremo como el observado, \(\mathbb{I}\) la función indicadora, \(T_k^{*}\) el coeficiente de correlación obtenido en la realización nula \(k\) y \(T_{\mathrm{obs}}\) el coeficiente observado después del tratamiento espacial. Para \(B=9\,999\), la incorporación de la realización observada genera un denominador de \(10\,000\), de modo que la menor significancia positiva estimable con esta regla es:
+
+\[
+\widehat{p}_{MC,\min}=\frac{1}{9\,999+1}
+=\frac{1}{10\,000}=0{,}0001.
+\]
+
+Esta cifra representa la resolución mínima del valor \(p\) reportable mediante la expresión indicada; no es el margen de error de la simulación ni garantiza por sí misma que la distribución nula esté representada con precisión suficiente. Una aproximación a la variabilidad de Monte Carlo de la proporción de excedencias, bajo realizaciones independientes y con probabilidad de cola \(p\), es:
+
+\[
+EE_{MC}\simeq\sqrt{\frac{p(1-p)}{B+1}}.
+\]
+
+Como referencia exclusivamente metodológica, si \(p=0{,}05\) y \(B=9\,999\), se obtiene \(EE_{MC}\simeq\sqrt{0{,}05(0{,}95)/10\,000}=0{,}00218\); este valor es un cálculo ilustrativo de precisión numérica, no un resultado de los sectores evaluados. La aproximación binomial requiere realizaciones Monte Carlo independientes y una implementación válida del modelo nulo, por lo que no sustituye la comprobación de las propiedades efectivas del algoritmo de aleatorización utilizado.
+
+La elección de 9\,999, frente a alternativas como 999 aleatorizaciones, proporciona una resolución de 0,0001 en lugar de 0,001 mediante la misma regla, a costa de un mayor tiempo de procesamiento. En una investigación con cuatro contrastes sujetos a la corrección de Holm, esa resolución facilita reportar valores pequeños sin atribuir precisión inexistente a la inferencia. No obstante, el número de simulaciones no controla los errores asociados a una matriz de vecindad mal especificada, a tendencias espaciales residuales o a una selección inadecuada del esquema de aleatorización; Wagner y Dray (2015) identificaron expresamente sensibilidad del método ante tendencias lineales, circunstancia que justifica comprobar la eliminación de tendencias antes de construir el modelo nulo.
+
+Para una implementación reproducible se requería documentar el algoritmo específico de aleatorización espectral de Moran, la semilla, la matriz de pesos, los estadísticos observados, el conteo \(b\) y las realizaciones utilizadas en cada contraste. La corrección \((b+1)/(B+1)\) debe aplicarse de manera coherente con el mecanismo de generación y la hipótesis nula implementada, sin presuponer que cualquier conjunto de simulaciones espaciales constituye automáticamente una prueba de permutación exacta. El libro de datos disponible no incorpora esas salidas ni permite confirmar que se haya ejecutado el procedimiento, por lo que las expresiones anteriores documentan el criterio de cálculo establecido y no resultados empíricos de la tesis.
 
 Los cuatro valores de significancia espacial debían corregirse conjuntamente mediante el método secuencial de Holm (1979), con tasa familiar de error de 0,05. El procedimiento ordena los valores \(p\) y los compara de forma sucesiva con umbrales ajustados según el número de hipótesis restantes, evitando que la evaluación independiente de cuatro relaciones eleve la probabilidad global de rechazos erróneos. La tabla de contrastación se diseñó para mostrar, en cada relación, tamaño de pares válidos, rho observado, coeficiente espacialmente ajustado, \(p\) bruto, \(p\) ajustado y decisión estadística, junto con una interpretación física de la magnitud y el sentido de la asociación. Los intervalos de confianza y medidas complementarias de incertidumbre solo debían incorporarse cuando su procedimiento de obtención fuera compatible con la dependencia espacial y pudiera reproducirse.
 
