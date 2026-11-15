@@ -21,21 +21,15 @@ La tabla~\ref{tab:res-distribucion} muestra que 14 de las 20 unidades (70 \%) pe
 
 La figura~\ref{fig:resultado-5} presenta el entorno vial de referencia, la distribución de las veinte unidades mediante coordenadas locales X--Y y el mapa cartográfico del corredor Simbal, organizados en los paneles A, B y C, respectivamente.
 
-% Figura 5: bloque indivisible en una sola página horizontal.
-% El PNG compuesto se conserva sin recorte ni alteración de la relación de aspecto.
-\clearpage
-\begin{landscape}
-\thispagestyle{plain}
-\begingroup
-\setstretch{1}
-\setlength{\parskip}{0pt}
-\noindent\begin{minipage}[c][0.87\textheight][c]{\linewidth}
+% Figura 5: figura flotante indivisible en página A4 vertical.
+% PNG sin recorte ni remuestreo: el ajuste se realiza solo al visualizar.
+\begin{figure}[p]
 \centering
-\captionof{figure}{Ubicación referencial y distribución local de las veinte unidades estructura--sector del corredor Simbal}
+\caption{Ubicación referencial y distribución local de las veinte unidades estructura--sector del corredor Simbal}
 \label{fig:resultado-5}
 \vspace{4pt}
 \IfFileExists{figuras/Figura_05_Mapa_Compuesto_Simbal_2026.png}{%
-  \includegraphics[width=0.96\linewidth,height=0.64\textheight,keepaspectratio]{figuras/Figura_05_Mapa_Compuesto_Simbal_2026.png}%
+  \includegraphics[width=0.98\linewidth,height=0.54\textheight,keepaspectratio]{figuras/Figura_05_Mapa_Compuesto_Simbal_2026.png}%
 }{%
   \fbox{\parbox[c][4.5cm][c]{0.82\linewidth}{\centering
     Falta el archivo original de la Figura 5.\\[6pt]
@@ -44,9 +38,7 @@ La figura~\ref{fig:resultado-5} presenta el entorno vial de referencia, la distr
 }
 \par
 \notaTabla{El panel A presenta un entorno vial referencial; el panel B utiliza las coordenadas locales X--Y de la base Simbal 2026; el panel C representa cartográficamente el corredor. No se dispone de una transformación local--UTM validada para acreditar la ubicación geográfica de cada sector.}
-\end{minipage}
-\endgroup
-\end{landscape}
+\end{figure}
 
 La figura~\ref{fig:resultado-5} muestra en el panel B las veinte unidades estructura--sector, agrupadas por tramo, mientras que los paneles A y C proporcionan referencias del entorno y del trazado vial. La matriz de proximidad W del análisis estadístico se obtuvo de las coordenadas locales de la base, sin utilizar las posiciones cartográficas ilustradas en el panel C.
 
