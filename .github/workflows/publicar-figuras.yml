@@ -1,0 +1,38 @@
+name: Publicar figuras 6 a 14
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'herramientas/generar_figuras_06_14.py'
+      - '.github/workflows/publicar-figuras.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generar-figuras:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Instalar librerías gráficas
+        run: pip install numpy scipy matplotlib
+      - name: Generar los nueve archivos PNG
+        run: python herramientas/generar_figuras_06_14.py
+      - name: Publicar figuras en rama main
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add figuras/Figura_06_*.png figuras/Figura_07_*.png figuras/Figura_08_*.png figuras/Figura_09_*.png figuras/Figura_10_*.png figuras/Figura_11_*.png figuras/Figura_12_*.png figuras/Figura_13_*.png figuras/Figura_14_*.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Publicar imágenes 6-14 del capítulo de resultados"
+            git push origin HEAD:main
+          fi
