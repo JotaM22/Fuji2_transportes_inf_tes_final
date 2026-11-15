@@ -8,9 +8,10 @@
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \footnotesize
+\begin{minipage}[t]{\linewidth}% Mantiene título, cuerpo y nota en la misma página.
 \captionof{table}{Distribución de unidades estructura–sector por tramo y condición superficial}\label{tab:res-distribucion}
 \vspace{4pt}
-\resizebox{\linewidth}{!}{%
+\adjustbox{max width=\linewidth}{%
 \begin{tabular}{@{}lrrrrr@{}}
 \toprule
 \textbf{Tramo} & \textbf{Unidades} & \textbf{Recapeo} & \textbf{Sector mixto} & \textbf{Pavimento flexible} & \textbf{Porcentaje} \\
@@ -22,8 +23,9 @@ Tramo 4 & 2 & 0 & 0 & 2 & 10\% \\
 TOTAL & 20 & 2 & 1 & 17 & 100\% \\
 \bottomrule
 \end{tabular}
-}% fin resizebox
+}% fin adjustbox
 \notaTabla{Datos calculados a partir de la base unificada de las veinte unidades estructura--sector de Simbal, 2026.}
+\end{minipage}
 \endgroup
 }
 
@@ -33,9 +35,10 @@ TOTAL & 20 & 2 & 1 & 17 & 100\% \\
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \scriptsize
+\begin{minipage}[t]{\linewidth}% Mantiene título, cuerpo y nota en la misma página.
 \captionof{table}{Indicadores CL, CT, PCI e IRI de las veinte unidades estructura–sector}\label{tab:res-indicadores}
 \vspace{4pt}
-\resizebox{\linewidth}{!}{%
+\adjustbox{max width=\linewidth}{%
 \begin{tabular}{@{}llrlrrrr@{}}
 \toprule
 \textbf{Unidad} & \textbf{Tramo} & \textbf{Pase (m)} & \textbf{Superficie} & \textbf{CL (\%)} & \textbf{CT (\%)} & \textbf{PCI} & \textbf{IRI (m/km)} \\
@@ -62,8 +65,9 @@ SIM-19 & 4 & 34 & Pav. flexible & 76,02 & 85,79 & 64,96 & 3,1425 \\
 SIM-20 & 4 & 182 & Pav. flexible & 70,25 & 67,19 & 62,41 & 3,9025 \\
 \bottomrule
 \end{tabular}
-}% fin de ajuste al ancho A4 vertical
+}% fin adjustbox
 \notaTabla{Datos calculados a partir de la base unificada de las veinte unidades estructura--sector de Simbal, 2026.}
+\end{minipage}
 \endgroup
 
 }
@@ -74,22 +78,24 @@ SIM-20 & 4 & 182 & Pav. flexible & 70,25 & 67,19 & 62,41 & 3,9025 \\
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \footnotesize
+\begin{minipage}[t]{\linewidth}% Mantiene título, cuerpo y nota en la misma página.
 \captionof{table}{Verificación de reconstrucción de indicadores y observaciones de consistencia de la base}\label{tab:res-auditoria}
 \vspace{4pt}
 \begin{tabularx}{\linewidth}{@{}p{2.7cm}p{1.35cm}p{2.1cm}X p{1.7cm}@{}}
 \toprule
 \textbf{Indicador / unidad} & \textbf{Registros} & \textbf{Diferencia} & \textbf{Comprobación} & \textbf{Resultado} \\
 \midrule
-CL & 20 & 0 & \parbox[t]{5.5cm}{Cálculo CL reconstruido desde Lc y Le} & Conforme \\
-CT & 20 & 0 & \parbox[t]{5.5cm}{Cálculo CT reconstruido desde áreas de ambos extremos} & Conforme \\
-PCI & 20 & 0 & \parbox[t]{5.5cm}{Promedio sectorial ponderado por área} & Conforme \\
-IRI & 20 & 0 & \parbox[t]{5.5cm}{Consolidación de los recorridos de ambas huellas} & Conforme \\
-SIM-14 & 1 & 0,21 & \parbox[t]{5.5cm}{Longitud nominal 82.46 m; perfilada 82.25 m} & Observación \\
-SIM-16 & 1 & 0,11 & \parbox[t]{5.5cm}{Longitud nominal 84.11 m; perfilada 84.00 m} & Observación \\
-SIM-20 & 1 & 0,24 & \parbox[t]{5.5cm}{Longitud nominal 85.74 m; perfilada 85.50 m} & Observación \\
+CL & 20 & 0 & Cálculo CL reconstruido desde Lc y Le & Conforme \\
+CT & 20 & 0 & Cálculo CT reconstruido desde áreas de ambos extremos & Conforme \\
+PCI & 20 & 0 & Promedio sectorial ponderado por área & Conforme \\
+IRI & 20 & 0 & Consolidación de los recorridos de ambas huellas & Conforme \\
+SIM-14 & 1 & 0,21 & Longitud nominal 82.46 m; perfilada 82.25 m & Observación \\
+SIM-16 & 1 & 0,11 & Longitud nominal 84.11 m; perfilada 84.00 m & Observación \\
+SIM-20 & 1 & 0,24 & Longitud nominal 85.74 m; perfilada 85.50 m & Observación \\
 \bottomrule
 \end{tabularx}
 \notaTabla{Los errores numéricos de reconstrucción se redondean a cero a la precisión mostrada; las diferencias longitudinales se expresan en metros.}
+\end{minipage}
 \endgroup
 }
 
@@ -99,9 +105,10 @@ SIM-20 & 1 & 0,24 & \parbox[t]{5.5cm}{Longitud nominal 85.74 m; perfilada 85.50 
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \scriptsize
+\begin{minipage}[t]{\linewidth}% Mantiene título, cuerpo y nota en la misma página.
 \captionof{table}{Estadísticos descriptivos de CL, CT, PCI e IRI en las veinte unidades}\label{tab:res-descriptivos}
 \vspace{4pt}
-\resizebox{\linewidth}{!}{%
+\adjustbox{max width=\linewidth}{%
 \begin{tabular}{@{}llrrrrrrrrr@{}}
 \toprule
 \textbf{Indicador} & \textbf{Unidad} & \textbf{n} & \textbf{Media} & \textbf{DE} & \textbf{Mediana} & \textbf{Q1} & \textbf{Q3} & \textbf{RIC} & \textbf{Mín.} & \textbf{Máx.} \\
@@ -112,8 +119,9 @@ PCI & 0–100 & 20 & 68,67 & 9,63 & 66,68 & 62,84 & 76,52 & 13,68 & 50,26 & 83,3
 IRI & m/km & 20 & 3,23 & 0,84 & 3,10 & 2,63 & 3,94 & 1,31 & 1,92 & 4,72 \\
 \bottomrule
 \end{tabular}
-}% ajuste al ancho de A4 vertical
+}% fin adjustbox
 \notaTabla{Datos calculados a partir de la base unificada de las veinte unidades estructura--sector de Simbal, 2026.}
+\end{minipage}
 \endgroup
 
 }
@@ -124,9 +132,10 @@ IRI & m/km & 20 & 3,23 & 0,84 & 3,10 & 2,63 & 3,94 & 1,31 & 1,92 & 4,72 \\
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \footnotesize
+\begin{minipage}[t]{\linewidth}% Mantiene título, cuerpo y nota en la misma página.
 \captionof{table}{Promedios de CL, CT, PCI e IRI según tramo vial}\label{tab:res-promedios}
 \vspace{4pt}
-\resizebox{\linewidth}{!}{%
+\adjustbox{max width=\linewidth}{%
 \begin{tabular}{@{}lrrrrr@{}}
 \toprule
 \textbf{Tramo} & \textbf{n} & \textbf{CL media (\%)} & \textbf{CT media (\%)} & \textbf{PCI medio} & \textbf{IRI medio (m/km)} \\
@@ -137,8 +146,9 @@ IRI & m/km & 20 & 3,23 & 0,84 & 3,10 & 2,63 & 3,94 & 1,31 & 1,92 & 4,72 \\
 4 & 2 & 73,14 & 76,49 & 63,69 & 3,52 \\
 \bottomrule
 \end{tabular}
-}% fin resizebox
+}% fin adjustbox
 \notaTabla{Datos calculados a partir de la base unificada de las veinte unidades estructura--sector de Simbal, 2026.}
+\end{minipage}
 \endgroup
 }
 
@@ -148,9 +158,10 @@ IRI & m/km & 20 & 3,23 & 0,84 & 3,10 & 2,63 & 3,94 & 1,31 & 1,92 & 4,72 \\
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \footnotesize
+\begin{minipage}[t]{\linewidth}% Mantiene título, cuerpo y nota en la misma página.
 \captionof{table}{Correlaciones de Spearman entre indicadores de drenaje y desempeño funcional}\label{tab:res-spearman}
 \vspace{4pt}
-\resizebox{\linewidth}{!}{%
+\adjustbox{max width=\linewidth}{%
 \begin{tabular}{@{}llrrrl@{}}
 \toprule
 \textbf{Hipótesis} & \textbf{Relación} & \textbf{n} & \textbf{Rho} & \textbf{p bilateral} & \textbf{Sentido} \\
@@ -161,8 +172,9 @@ H3 & CT–PCI & 20 & 0,1714 & 0,4699 & Directa \\
 H4 & CT–IRI & 20 & -0,1053 & 0,6587 & Inversa \\
 \bottomrule
 \end{tabular}
-}% fin resizebox
+}% fin adjustbox
 \notaTabla{Datos calculados a partir de la base unificada de las veinte unidades estructura--sector de Simbal, 2026.}
+\end{minipage}
 \endgroup
 }
 
@@ -172,9 +184,10 @@ H4 & CT–IRI & 20 & -0,1053 & 0,6587 & Inversa \\
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \footnotesize
+\begin{minipage}[t]{\linewidth}% Mantiene título, cuerpo y nota en la misma página.
 \captionof{table}{Parámetros de ajuste de tendencia espacial e índice de Moran de los rangos y residuos}\label{tab:res-moran-param}
 \vspace{4pt}
-\resizebox{\linewidth}{!}{%
+\adjustbox{max width=\linewidth}{%
 \begin{tabular}{@{}lrrrrr@{}}
 \toprule
 \textbf{Indicador} & \textbf{Intercepto} & \textbf{$\beta_X$} & \textbf{$\beta_Y$} & \textbf{Moran rangos} & \textbf{Moran residuos} \\
@@ -185,8 +198,9 @@ PCI & 10,5000 & -4,9297 & 1,5757 & 0,0480 & -0,3506 \\
 IRI & 10,5000 & 1,3866 & 0,4364 & 0,0642 & -0,0691 \\
 \bottomrule
 \end{tabular}
-}% fin resizebox
+}% fin adjustbox
 \notaTabla{Datos calculados a partir de la base unificada de las veinte unidades estructura--sector de Simbal, 2026.}
+\end{minipage}
 \endgroup
 }
 
@@ -196,9 +210,11 @@ IRI & 10,5000 & 1,3866 & 0,4364 & 0,0642 & -0,0691 \\
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \footnotesize
+\begin{minipage}[t]{\linewidth}% Mantiene título, cuerpo y nota en la misma página.
 \captionof{table}{Correlaciones ajustadas y valores p de las 9 999 aleatorizaciones espaciales}\label{tab:res-moran-pruebas}
 \vspace{4pt}
-\begin{tabularx}{\linewidth}{@{}llrrrrl@{}}
+\adjustbox{max width=\linewidth}{%
+\begin{tabular}{@{}llrrrrl@{}}
 \toprule
 \textbf{Hipótesis} & \textbf{Relación} & \textbf{Rho residual} & \textbf{B} & \textbf{b extremos} & \textbf{p espacial} & \textbf{Prueba} \\
 \midrule
@@ -207,8 +223,10 @@ H2 & CL–IRI & -0,5893 & 9999 & 355 & 0,0356 & Bilateral \\
 H3 & CT–PCI & 0,2893 & 9999 & 2674 & 0,2675 & Bilateral \\
 H4 & CT–IRI & -0,1400 & 9999 & 5216 & 0,5217 & Bilateral \\
 \bottomrule
-\end{tabularx}
+\end{tabular}
+}% fin adjustbox
 \notaTabla{El valor p bilateral se calculó como (b + 1)/(B + 1), con B = 9\,999 aleatorizaciones.}
+\end{minipage}
 \endgroup
 }
 
@@ -218,9 +236,10 @@ H4 & CT–IRI & -0,1400 & 9999 & 5216 & 0,5217 & Bilateral \\
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \footnotesize
+\begin{minipage}[t]{\linewidth}% Mantiene título, cuerpo y nota en la misma página.
 \captionof{table}{Ajuste secuencial de Holm y decisiones estadísticas de las hipótesis H1 a H4}\label{tab:res-holm}
 \vspace{4pt}
-\resizebox{\linewidth}{!}{%
+\adjustbox{max width=\linewidth}{%
 \begin{tabular}{@{}rlrrrrrl@{}}
 \toprule
 \textbf{Orden} & \textbf{Hipótesis} & \textbf{p espacial} & \textbf{Factor} & \textbf{p por factor} & \textbf{p Holm} & \textbf{Umbral} & \textbf{Decisión} \\
@@ -231,8 +250,9 @@ H4 & CT–IRI & -0,1400 & 9999 & 5216 & 0,5217 & Bilateral \\
 4 & H4 & 0,5217 & 1 & 0,5217 & 0,5350 & 0,0500 & No significativa \\
 \bottomrule
 \end{tabular}
-}% ajuste al ancho de A4 vertical
+}% fin adjustbox
 \notaTabla{Significancia familiar: $\alpha=0{,}05$; ajuste secuencial de Holm.}
+\end{minipage}
 \endgroup
 
 }
@@ -243,9 +263,10 @@ H4 & CT–IRI & -0,1400 & 9999 & 5216 & 0,5217 & Bilateral \\
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \footnotesize
+\begin{minipage}[t]{\linewidth}% Mantiene título, cuerpo y nota en la misma página.
 \captionof{table}{Intervalos de sensibilidad de las correlaciones de Spearman por exclusión de una unidad}\label{tab:res-loo}
 \vspace{4pt}
-\resizebox{\linewidth}{!}{%
+\adjustbox{max width=\linewidth}{%
 \begin{tabular}{@{}llrrrlr@{}}
 \toprule
 \textbf{Hipótesis} & \textbf{Relación} & \textbf{Rho inicial} & \textbf{Mín. LOO} & \textbf{Máx. LOO} & \textbf{Signo estable} & \textbf{Exclusiones} \\
@@ -256,8 +277,9 @@ H3 & CT–PCI & 0,1714 & 0,0439 & 0,2684 & Sí & 20 \\
 H4 & CT–IRI & -0,1053 & -0,2211 & 0,0439 & No & 20 \\
 \bottomrule
 \end{tabular}
-}% fin resizebox
+}% fin adjustbox
 \notaTabla{LOO: exclusión sucesiva de una unidad; las correlaciones se calcularon con $n=19$.}
+\end{minipage}
 \endgroup
 }
 
@@ -267,9 +289,10 @@ H4 & CT–IRI & -0,1053 & -0,2211 & 0,0439 & No & 20 \\
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \footnotesize
+\begin{minipage}[t]{\linewidth}% Mantiene título, cuerpo y nota en la misma página.
 \captionof{table}{Síntesis de resultados de los objetivos específicos, hipótesis y decisión inferencial}\label{tab:res-sintesis}
 \vspace{4pt}
-\resizebox{\linewidth}{!}{%
+\adjustbox{max width=\linewidth}{%
 \begin{tabular}{@{}llllrrrl@{}}
 \toprule
 \textbf{Objetivo} & \textbf{Hipótesis} & \textbf{Relación} & \textbf{Sentido} & \textbf{Rho residual} & \textbf{p espacial} & \textbf{p Holm} & \textbf{Resultado} \\
@@ -280,8 +303,9 @@ OE3 & H3 & CT–PCI & Directa & 0,2893 & 0,2675 & 0,5350 & No significativa (Hol
 OE4 & H4 & CT–IRI & Inversa & -0,1400 & 0,5217 & 0,5350 & No significativa (Holm) \\
 \bottomrule
 \end{tabular}
-}% ajuste al ancho de A4 vertical
+}% fin adjustbox
 \notaTabla{Las decisiones corresponden a hipótesis específicas; no se estimó un contraste global independiente.}
+\end{minipage}
 \endgroup
 
 }
