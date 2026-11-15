@@ -21,11 +21,11 @@
 \setlength{\cfttabindent}{0pt}
 \setlength{\cftbeforefigskip}{0pt}
 \setlength{\cftbeforetabskip}{0pt}
-\titleformat{\section}[hang]{\normalfont\bfseries\normalsize}{\thesection.}{.7em}{}
+\titleformat{\section}[hang]{\normalfont\bfseries\normalsize\raggedright}{\thesection.}{.7em}{}
 \titlespacing*{\section}{0pt}{8pt}{6pt}
-\titleformat{\subsection}[hang]{\normalfont\bfseries\normalsize}{\thesubsection.}{.7em}{}
+\titleformat{\subsection}[hang]{\normalfont\bfseries\normalsize\raggedright}{\thesubsection.}{.7em}{}
 \titlespacing*{\subsection}{0pt}{8pt}{6pt}
-\titleformat{\subsubsection}[hang]{\normalfont\bfseries\normalsize}{\thesubsubsection.}{.7em}{}
+\titleformat{\subsubsection}[hang]{\normalfont\bfseries\normalsize\raggedright}{\thesubsubsection.}{.7em}{}
 \titlespacing*{\subsubsection}{0pt}{8pt}{6pt}
 \newcommand{\seccionTesis}[1]{\section{\MakeUppercase{#1}}}
 \newcommand{\espacioTituloParrafo}{\vspace{-14pt}}
@@ -48,7 +48,7 @@
 \newlist{listaTesis}{itemize}{1}
 \setlist[listaTesis]{label=\raisebox{.25ex}{\rule{.8mm}{.8mm}},leftmargin=.75cm,labelsep=.3cm,itemsep=3pt,parsep=0pt,topsep=3pt}
 % Titulos capitulares sin sangria y alineados al margen izquierdo.
-\titleformat{\chapter}[hang]{\normalfont\bfseries\normalsize}{\thechapter.}{.7em}{}
+\titleformat{\chapter}[hang]{\normalfont\bfseries\normalsize\raggedright}{\thechapter.}{.7em}{}
 \titlespacing*{\chapter}{0pt}{0pt}{8pt}
 
 \newcommand{\capituloTesis}[1]{%
