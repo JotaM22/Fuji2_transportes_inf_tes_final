@@ -19,17 +19,21 @@ La distribución de las veinte unidades según tramo y condición superficial se
 
 La tabla~\ref{tab:res-distribucion} muestra que 14 de las 20 unidades (70 \%) pertenecen al tramo 01, mientras que los tramos 02, 03 y 04 contienen dos unidades cada uno, equivalentes al 10 \% por tramo. En cuanto a la superficie registrada, el conjunto comprende 17 unidades clasificadas como pavimento flexible (85 \%), dos como recapeo (10 \%) y una como sector mixto (5 \%); las tres últimas unidades de las categorías recapeo y sector mixto se ubican en el tramo 01, que también reúne once sectores clasificados como pavimento flexible. En cambio, los tramos 02, 03 y 04 están integrados exclusivamente por unidades de pavimento flexible, de modo que la tabla describe simultáneamente la desigual distribución territorial del inventario y la concentración de las categorías superficiales especiales en un solo tramo, sin derivar de ello diferencias funcionales entre categorías.
 
-La figura~\ref{fig:resultado-5} representa la distribución de las veinte unidades mediante sus coordenadas locales X--Y y los identificadores SIM-01 a SIM-20, agrupados por tramo.
+La figura~\ref{fig:resultado-5} presenta el entorno vial de referencia, la distribución de las veinte unidades mediante coordenadas locales X--Y y el mapa cartográfico del corredor Simbal, organizados en los paneles A, B y C, respectivamente.
 
-\begin{figure}[htbp]
+\begin{paginaHorizontal}
 \centering
-\caption{Distribución espacial relativa de las veinte unidades estructura–sector del corredor Simbal}
+\captionof{figure}{Ubicación referencial y distribución local de las veinte unidades estructura--sector del corredor Simbal}
 \label{fig:resultado-5}
-\resizebox{0.97\linewidth}{!}{\input{figuras/Figura_05_Distribucion_Local_Simbal_2026.tex}}
-\notaTabla{Distribución relativa calculada con las coordenadas locales X--Y de las veinte unidades estructura--sector de la base Simbal 2026. No representa ubicaciones geográficas absolutas ni coordenadas UTM.}
-\end{figure}
+\IfFileExists{figuras/Figura_05_Mapa_Compuesto_Simbal_2026.png}{%
+  \includegraphics[width=0.98\linewidth,height=0.79\textheight,keepaspectratio]{figuras/Figura_05_Mapa_Compuesto_Simbal_2026.png}%
+}{%
+  \resizebox{0.95\linewidth}{!}{\input{figuras/Figura_05_Distribucion_Local_Simbal_2026.tex}}%
+}
+\notaTabla{El panel A presenta un entorno vial referencial; el panel B utiliza las coordenadas locales X--Y de la base Simbal 2026; el panel C representa cartográficamente el corredor. No se dispone de una transformación local--UTM validada para acreditar la ubicación geográfica de cada sector.}
+\end{paginaHorizontal}
 
-La figura~\ref{fig:resultado-5} muestra la secuencia referencial de los sectores a lo largo de los cuatro tramos y permite reconocer las agrupaciones de unidades próximas. La representación emplea exclusivamente las coordenadas locales de la base, que también sustentan el cálculo de distancias utilizado para construir la matriz W; por tanto, no debe interpretarse como una localización geográfica absoluta.
+La figura~\ref{fig:resultado-5} muestra en el panel B las veinte unidades estructura--sector, agrupadas por tramo, mientras que los paneles A y C proporcionan referencias del entorno y del trazado vial. La matriz de proximidad W del análisis estadístico se obtuvo de las coordenadas locales de la base, sin utilizar las posiciones cartográficas ilustradas en el panel C.
 
 \subseccionTesis{Consolidación de los indicadores por unidad}
 
