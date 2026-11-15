@@ -28,14 +28,15 @@ TOTAL & 20 & 2 & 1 & 17 & 100\% \\
 }
 
 \newcommand{\tablaResultadoTres}{%
-\begin{paginaHorizontal}
+\par\medskip\noindent
 \begingroup
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{4pt}
 \scriptsize
 \captionof{table}{Indicadores CL, CT, PCI e IRI de las veinte unidades estructura–sector}\label{tab:res-indicadores}
 \vspace{4pt}
-\begin{tabularx}{\linewidth}{@{}llrlrrrr@{}}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}llrlrrrr@{}}
 \toprule
 \textbf{Unidad} & \textbf{Tramo} & \textbf{Pase (m)} & \textbf{Superficie} & \textbf{CL (\%)} & \textbf{CT (\%)} & \textbf{PCI} & \textbf{IRI (m/km)} \\
 \midrule
@@ -60,10 +61,11 @@ SIM-18 & 3 & 235 & Pav. flexible & 88,59 & 83,30 & 75,86 & 3,1200 \\
 SIM-19 & 4 & 34 & Pav. flexible & 76,02 & 85,79 & 64,96 & 3,1425 \\
 SIM-20 & 4 & 182 & Pav. flexible & 70,25 & 67,19 & 62,41 & 3,9025 \\
 \bottomrule
-\end{tabularx}
+\end{tabular}
+}% fin de ajuste al ancho A4 vertical
 \notaTabla{Datos calculados a partir de la base unificada de las veinte unidades estructura--sector de Simbal, 2026.}
 \endgroup
-\end{paginaHorizontal}
+
 }
 
 \newcommand{\tablaResultadoCuatro}{%
